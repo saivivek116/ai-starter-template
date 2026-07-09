@@ -2,9 +2,9 @@ import { createOpenAI } from "@ai-sdk/openai";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
 
 // Allow streaming responses up to 30 seconds
-export const maxDuration = 30;
+export const maxDuration = 60;
 
-// The API key is stored in .env as OPEN_AI_KEY (not the default OPENAI_API_KEY
+
 // that @ai-sdk/openai auto-reads), so read it explicitly.
 const openai = createOpenAI({ apiKey: process.env.OPEN_AI_KEY });
 
